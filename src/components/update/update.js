@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Update() {
     let navigate = useNavigate();
-    const [id, setID] = useState(null);
+    const [id, setID] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [friendship, setFriendship] = useState('');

@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import { Button, Form } from 'semantic-ui-react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { dblClick } from '@testing-library/user-event/dist/click';
+import FetchData from '../fetchData/fetchData';
 
 function Create() {
     let navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [friendship, setFriendship] = useState('');
+    const [key, setKey] = useState('');
+    
     
     const postData = () => {
         axios.post(`http://localhost:8000/friends/`, {
@@ -48,7 +52,7 @@ function Create() {
                     <label>Friendship</label>
                     <input placeholder='Friendship' onChange={(e) => setFriendship(e.target.value)}/>
                 </Form.Field>
-                <Button onClick={wrapperFunction} type='submit'>Submit</Button>
+                <Button onClick={ wrapperFunction } type='submit'>Submit</Button>
             </Form>
         </div>
     )

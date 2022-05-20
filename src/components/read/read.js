@@ -4,7 +4,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 
-
 function Read() {
   const [APIData, setAPIData] = useState([]);
   useEffect(() => {
@@ -24,6 +23,16 @@ function Read() {
           })
   }, []);
 
+  
+
+  // APIData.map( APIData => {
+  //   return(
+  //       <div className="box" key={ APIData.id}>
+  //           { APIData.firstName }
+  //       </div>
+  //   )
+  // })   
+
   const getData = () => {
       axios.get(`http://localhost:8000/friends/`)
           .then((getData) => {
@@ -32,7 +41,7 @@ function Read() {
   }
 
   const getData1 = () => {
-    axios.get(`http://localhost:8000/friendships/`)
+    axios.get(`http://localhost:8003/friendships/`)
         .then((getData1) => {
             setAPIData1(getData1.data);
         })
@@ -58,7 +67,7 @@ const setData1 = (data1) => {
   }
 
   const onDelete1 = (id) => {
-    axios.delete(`http://localhost:8000/friends/${id}`)
+    axios.delete(`http://localhost:8003/friendships/${id}`)
     .then(() => {
         getData1();
     })
@@ -66,14 +75,7 @@ const setData1 = (data1) => {
 
   APIData.map(x => Object.assign(x, APIData1.find(y => y.id === x.id)));
 
-  const wrapperFunction = () => {
-    //do something
-    setData();
-    //do something
-    setData1();
 
-    onDelete1();
-}
   return (
     <div>
       <Table singleLine>
@@ -96,11 +98,11 @@ const setData1 = (data1) => {
                 <Table.Cell>{data.friendship}</Table.Cell>
                 <Link to="/update">
                   <Table.Cell>
-                    <Button onClick={() => setData(data)}>Update</Button>
+                  <Button onClick={e => { setData(data); setData1(data); }}>Update</Button>
                   </Table.Cell>
                 </Link>
                 <Table.Cell>
-                  <Button onClick={() => onDelete(data.id)}>Delete</Button>
+                  <Button onClick={e => { onDelete(data.id); onDelete1(data.id); }}>Delete</Button>
                 </Table.Cell>
               </Table.Row>
             );
