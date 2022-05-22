@@ -45,11 +45,9 @@ function Search({ details }) {
   }
 
   return (
-    <section className="garamond">
-      <div className="navy georgia ma0 grow">
-        <h2 className="f2">Search your course</h2>
-      </div>
-      <div className="pa2">
+    <div className='front'>
+      
+      <div className="mainDiv">
         <input 
           className="pa3 bb br3 grow b--none bg-lightest-blue ma3"
           type = "search" 
@@ -58,7 +56,8 @@ function Search({ details }) {
         />
       </div>
       {searchList()}
-    </section>
+      
+    </div>
   );
 }
 

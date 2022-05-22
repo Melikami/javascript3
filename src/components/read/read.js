@@ -2,7 +2,7 @@ import { Table, Button } from "semantic-ui-react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import '../../App.css';
 
 function Read() {
   const [APIData, setAPIData] = useState([]);
@@ -77,7 +77,11 @@ const setData1 = (data1) => {
 
 
   return (
-    <div>
+    <div className="front">
+      <div className="tracker">
+                <h1>Friend Tracker</h1>
+            </div>
+            <div className="mainDiv">
       <Table singleLine>
         <Table.Header>
           <Table.Row>
@@ -96,19 +100,32 @@ const setData1 = (data1) => {
                 <Table.Cell>{data.firstName}</Table.Cell>
                 <Table.Cell>{data.lastName}</Table.Cell>
                 <Table.Cell>{data.friendship}</Table.Cell>
-                <Link to="/update">
-                  <Table.Cell>
-                  <Button onClick={e => { setData(data); setData1(data); }}>Update</Button>
-                  </Table.Cell>
+                <td>
+                <Link to="/update">      
+                  <Button className="buttonRead" onClick={e => { setData(data); setData1(data); }}>Update</Button>     
                 </Link>
+                </td>
                 <Table.Cell>
-                  <Button onClick={e => { onDelete(data.id); onDelete1(data.id); }}>Delete</Button>
+                  <Button className="buttonRead" onClick={e => { onDelete(data.id); onDelete1(data.id); }}>Delete</Button>
                 </Table.Cell>
               </Table.Row>
             );
           })}
         </Table.Body>
       </Table>
+      <div>
+      <Link exact to="/create">
+      <Button className="buttonUpdate">
+            Create
+            </Button>
+          </Link>
+      <Link exact to="/mainmenu">
+            <Button className="buttonUpdate">
+            Back
+            </Button>
+          </Link>
+          </div>
+    </div>
     </div>
   );
 }

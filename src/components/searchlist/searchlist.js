@@ -7,8 +7,10 @@ import Card from '../card/card';
 function SearchList({ filteredPersons }) {
   const filtered = filteredPersons.map(friends =>  <Card key={friends.id} friends={friends} />); 
   return (
-    <div>
+    <div className=''>
+      <div className='searchDiv'>
       {filtered}
+    </div>
     </div>
   );
 }

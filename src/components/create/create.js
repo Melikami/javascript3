@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { Button, Form } from 'semantic-ui-react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { dblClick } from '@testing-library/user-event/dist/click';
-import FetchData from '../fetchData/fetchData';
+import '../../App.css';
+import { Link } from 'react-router-dom';
 
 function Create() {
     let navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [friendship, setFriendship] = useState('');
-    const [key, setKey] = useState('');
+    // const [key, setKey] = useState('');
     
     
     const postData = () => {
@@ -37,23 +37,36 @@ function Create() {
         postData1();
     }
     
+    const header = require("../../img/friendprofile.jpg");
+
     return (
-        <div>
+        <div className="front">
+      <div className="tracker">
+                <h1>Add Friend</h1>
+            </div>
+            <img src={header} class="headerPhoto" alt="Header" />
+        <div className="mainDiv">
             <Form className="create-form">
                 <Form.Field>
-                    <label>First Name</label>
+                <span class="label">First Name</span>
                     <input placeholder='First Name' onChange={(e) => setFirstName(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                    <label>Last Name</label>
+                <span class="label">Last Name</span>
                     <input placeholder='Last Name' onChange={(e) => setLastName(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                    <label>Friendship</label>
+                <span class="label">Friendship</span>
                     <input placeholder='Friendship' onChange={(e) => setFriendship(e.target.value)}/>
                 </Form.Field>
-                <Button onClick={ wrapperFunction } type='submit'>Submit</Button>
+                <Button className="buttonUpdate" onClick={ wrapperFunction } type='submit'>Back</Button>
+                <Link exact to="/mainmenu">
+            <Button className="buttonUpdate">
+            Back
+            </Button>
+          </Link>
             </Form>
+        </div>
         </div>
     )
 }

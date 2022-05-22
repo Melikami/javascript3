@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Button, Form } from 'semantic-ui-react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import '../../App.css';
+import { Link } from 'react-router-dom';
 
 function Update() {
     let navigate = useNavigate();
@@ -41,23 +43,38 @@ function Update() {
         updateAPIData1();
     }
 
+    const header = require("../../img/friendprofile.jpg");
+
     return (
-        <div>
+        <div className="front">
+      <div className="tracker">
+                <h1>{firstName} {lastName}</h1>
+            </div>
+            <div className="frontImg">
+            <img src={header} className="headerPhoto" alt="Header" />
+            </div>
+            <div className="mainDiv">
             <Form className="create-form">
                 <Form.Field>
-                    <label>First Name</label>
+                <span class="label">First Name</span>
                     <input placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                    <label>Last Name</label>
+                <span class="label">Last Name</span>
                     <input placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                    <label>Friendship</label>
+                <span class="label">Friendship</span>
                     <input placeholder='Friendship' value={friendship} onChange={(e) => setFriendship(e.target.value)}/>
                 </Form.Field>
-                <Button onClick={wrapperFunction} type='submit'>Update</Button>
+                <Button className="buttonUpdate" onClick={wrapperFunction} type='submit'>Update</Button>
+                <Link exact to="/read">
+            <Button className="buttonUpdate">
+            Back
+            </Button>
+          </Link>
             </Form>
+        </div>
         </div>
     )
 }

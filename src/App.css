@@ -1,18 +1,177 @@
+body {
+ 
+}
+
 .main{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #212121;
-  color: whitesmoke;
+  background-color: #ffff;
+  color: black;
   flex-direction: column;
+  margin-top: 150px;
 }
 
+.front{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  max-width: 800px;
+  min-width: 400px;
+  flex-direction: column;
+  border: 5px solid black;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+.tracker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  max-width: 800px;
+  min-width: 400px;
+}
+
+.headerPhoto {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    min-width: 400px;
+    display: flex;
+  }
+
 .create-form label{
-  color: whitesmoke !important;
+  color: black !important;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px !important;
   display: flex;
-  background-color: black;
+  background-color: grey;
   padding: 5px;
+}
+
+ul, li {
+  margin: 10px;
+  padding: 5px;
+  list-style-type: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  min-width: 400px;
+}
+
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  background-color: white;
+  max-width: 800px;
+  min-width: 400px;
+}
+
+.searchDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  background-color: white;
+  width: 340px;
+}
+
+Button {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 5px;
+  border-radius: 50px;
+  transition-duration: 0.4s;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+Button:hover {
+  background-color: white; /* Green */
+  color: black;
+  border: 2px solid black;
+}
+
+.buttonRead {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 5px;
+  border-radius: 50px;
+  transition-duration: 0.4s;
+  border: 2px solid white;
+  font-size: 10px;
+}
+
+.buttonRead:hover {
+  background-color: white; /* Green */
+  color: black;
+  border: 2px solid black;
+}
+
+.buttonUpdate {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+  border-radius: 50px;
+  transition-duration: 0.4s;
+  border: 2px solid white;
+  font-size: 15px;
+}
+
+.buttonUpdate:hover {
+  background-color: white; /* Green */
+  color: black;
+  border: 2px solid black;
+}
+
+create-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  max-width: 800px;
+  min-width: 400px;
+}
+
+span {
+  display: flex;
+  color: black;
+  margin: 5px;
+}
+
+table, td, th {
+  display: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+table {
+  width: 100%;
+}
+
+input {
+  width: 100%;
 }
