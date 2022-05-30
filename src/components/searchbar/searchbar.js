@@ -19,7 +19,7 @@ function Searchbar() {
           })
   }, []);
 
-const header = require("../../img/friends3.jpg");
+const header = require("../../img/texting.jpg");
     return (
         <div className="front">
             <div className="tracker">

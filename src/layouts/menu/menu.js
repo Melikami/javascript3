@@ -5,41 +5,46 @@ import { Button } from "semantic-ui-react";
 function Menu() {
     return (
       <div className="menu">
-        <Link exact to="/">
+        <Link exact to="/mainmenu">
             <Button>
-            Menu
+            Main Menu
             </Button>
           </Link>
-          <Link exact to="/create">
+          {/* <Link exact to="/create">
           <Button>
-            Create
+            Add Friend
             </Button>
           </Link>
           <Link exact to="/mycalendar">
           <Button>
-            Calendar
+            Calendar API
             </Button>
+          </Link>
+        <Link exact to="/caladdevent">
+        <Button>
+            Add Event Calendar
+          </Button>
           </Link>
           <Link exact to="/read">
           <Button>
-            Read
+            Friend List
             </Button>
-          </Link>
-          <Link exact to="/update">
+          </Link> */}
+          {/* <Link exact to="/update">
           <Button>
             Update
             </Button>
-          </Link>
-          <Link exact to="/searchbar">
+          </Link> */}
+          {/* <Link exact to="/searchbar">
           <Button>
-            Searchbar
+            Search Friends
             </Button>
-          </Link>
-          <Link exact to="/main">
+          </Link> */}
+          {/* <Link exact to="/main">
           <Button>
             Main
             </Button>
-          </Link>
+          </Link> */}
       </div>
     );
 }

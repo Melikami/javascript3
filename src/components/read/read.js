@@ -4,6 +4,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import '../../App.css';
 
+const header = require("../../img/catdog.jpg");
+
 function Read() {
   const [APIData, setAPIData] = useState([]);
   useEffect(() => {
@@ -80,6 +82,9 @@ const setData1 = (data1) => {
     <div className="front">
       <div className="tracker">
                 <h1>Friend Tracker</h1>
+            </div>
+            <div className="frontImg">
+            <img src={header} class="headerPhoto" alt="Header" />
             </div>
             <div className="mainDiv">
       <Table singleLine>

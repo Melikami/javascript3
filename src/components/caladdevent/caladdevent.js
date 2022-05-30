@@ -3,6 +3,8 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import axios from 'axios';
+import { Link } from "react-router-dom";
+import { Button } from 'semantic-ui-react';
 
 function CalAddEvent() {
     const localizer = momentLocalizer(moment)
@@ -11,12 +13,15 @@ function CalAddEvent() {
     function handleSelect({ start, end }) {
       const title = window.prompt("New Event name");
       if (title) {
-        var newEvent = {
+        var activity = {
           start: start,
           end: end,
           title: title
         };
-        setEventsList([...eventsList, newEvent]);
+        setEventsList(
+          axios.post(`http://localhost:8001/events/`, {
+          activity
+      }));
       }
     }
 
@@ -32,6 +37,11 @@ function CalAddEvent() {
         endAccessor="end"
         style={{ height: 500 }}
         onSelectSlot={handleSelect}/>
+        <Link exact to="/mainmenu">
+            <Button className="buttonUpdate">
+            Back
+            </Button>
+          </Link>
         </div>
     )
 }

@@ -43,7 +43,7 @@ function Update() {
         updateAPIData1();
     }
 
-    const header = require("../../img/friendprofile.jpg");
+    const header = require("../../img/catyawn.jpg");
 
     return (
         <div className="front">

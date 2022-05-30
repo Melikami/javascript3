@@ -1,30 +1,30 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import React  from 'react';
 
 const Nav = () => {
   return (
     <ul>
-      <li>
+      {/* <li key="1">
         <Link exact to="/mainmenu">
             Main menu
           </Link>
       </li>
-      <li>
+      <likey="2">
         <Link exact to="/caladdevent">
             Add Event Calendar
           </Link>
       </li>
-      <li>
+      <li key="3">
         <Link exact to="/">
             Home
           </Link>
       </li>
-      <li>
+      <li key="4">
         <Link exact to="/mycalendar">
             Calendar
           </Link>
       </li>
-      <li>
+      <li key="5">
         <Link
           to={{
             pathname: "/create",
@@ -33,7 +33,7 @@ const Nav = () => {
           Create
         </Link>
       </li>
-      <li>
+      <li key="6">
         <Link
           to={{
             pathname: "/read",
@@ -42,16 +42,7 @@ const Nav = () => {
           Read
         </Link>
       </li>
-      <li>
-        <Link
-          to={{
-            pathname: "/update",
-          }}
-        >
-          Update
-        </Link>
-      </li>
-      <li>
+      <li key="7">
         <Link
           to={{
             pathname: "/searchbar",
@@ -60,7 +51,7 @@ const Nav = () => {
           Searchbar
         </Link>
       </li>
-      <li>
+      <li key="8">
         <Link
           to={{
             pathname: "/main",
@@ -68,7 +59,7 @@ const Nav = () => {
         >
           Main
         </Link>
-      </li>
+      </li> */}
     </ul>
   );
 };

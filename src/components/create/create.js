@@ -4,19 +4,24 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../../App.css';
 import { Link } from 'react-router-dom';
+import { v4 } from 'uuid';
 
 function Create() {
     let navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [friendship, setFriendship] = useState('');
-    // const [key, setKey] = useState('');
+    
+    const key = {};
+    key.id = v4()
+
     
     
     const postData = () => {
         axios.post(`http://localhost:8000/friends/`, {
             firstName,
-            lastName
+            lastName,
+            key
         }).then(() => {
             navigate('/read')
         })
@@ -24,19 +29,22 @@ function Create() {
 
     const postData1 = () => {
         axios.post(`http://localhost:8003/friendships/`, {
-            friendship
+            friendship,
+            key
         }).then(() => {
             navigate('/read')
         })
     }
-
+    
     const wrapperFunction = () => {
         //do something
         postData();
         //do something
         postData1();
+        
     }
-    
+
+
     const header = require("../../img/friendprofile.jpg");
 
     return (
@@ -59,8 +67,8 @@ function Create() {
                 <span class="label">Friendship</span>
                     <input placeholder='Friendship' onChange={(e) => setFriendship(e.target.value)}/>
                 </Form.Field>
-                <Button className="buttonUpdate" onClick={ wrapperFunction } type='submit'>Back</Button>
-                <Link exact to="/mainmenu">
+                <Button className="buttonUpdate" onClick={ wrapperFunction } type='submit'>Create</Button>
+                <Link exact to="/read">
             <Button className="buttonUpdate">
             Back
             </Button>
