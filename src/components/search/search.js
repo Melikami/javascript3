@@ -1,62 +1,59 @@
-// src/components/Search.js
+/** Component that initialise value of searchField state with useState(""). Then filtering the details list received from the parent. The filter check for firstName and lastName and convert them to lowercase. Includes function check if any letters are included in the details. If it's included, the details are sent into filteredPersons.
+ * @param searchField - set with useState(""), for the object searching
+ * @param setSearchField - sets the value of the SearchField
+ * @param searchShow - Searched object shows up here if matched
+ * @param setSearchShow - sets the boolean status true or false to show the object info or not in the searchField
+ * @param filteredPersons - filters through the details of database "friends" to find matching spelled objects
+ * @return - "friends" database object's firstName or lastName filtered through for matching spelling and put toLowerCase
+ * @param handleChange - sets the SearchField to show objects if matching in spelling, and to not show object if not matching
+ * @param searchList - if searchShow is set to true then the matching object by spelling is showed in the SearchList in the Scroll component.
+ * @return - a div with handleChange deciding if objects from SearchList is being showed or not
+ */
 
-import React, { useState } from 'react';
-import Scroll from '../scroll/scroll';
-import SearchList from '../searchlist/searchlist';
+import React, { useState } from "react";
+import Scroll from "../scroll/scroll";
+import SearchList from "../searchlist/searchlist";
 
 function Search({ details }) {
+  const [searchField, setSearchField] = useState("");
+  const [searchShow, setSearchShow] = useState(false);
 
-    const [searchField, setSearchField] = useState("");
-    const [searchShow, setSearchShow] = useState(false); 
+  const filteredPersons = details.filter((friends) => {
+    return (
+      friends.firstName.toLowerCase().includes(searchField.toLowerCase()) ||
+      friends.lastName.toLowerCase().includes(searchField.toLowerCase())
+    );
+  });
 
-  const filteredPersons = details.filter(
-    friends => {
-      return (
-        friends
-        .firstName
-        .toLowerCase()
-        .includes(searchField.toLowerCase()) ||
-        friends
-        .lastName
-        .toLowerCase()
-        .includes(searchField.toLowerCase())
-      );
-    }
-  );
-
-  const handleChange = e => {
+  const handleChange = (e) => {
     setSearchField(e.target.value);
-    if(e.target.value===""){
-        setSearchShow(false);
-      }
-      else {
-        setSearchShow(true);
-      }
+    if (e.target.value === "") {
+      setSearchShow(false);
+    } else {
+      setSearchShow(true);
+    }
   };
 
   function searchList() {
     if (searchShow) {
-    return (
-      <Scroll>
-        <SearchList filteredPersons={filteredPersons} />
-      </Scroll>
-    );
+      return (
+        <Scroll>
+          <SearchList filteredPersons={filteredPersons} />
+        </Scroll>
+      );
     }
   }
 
   return (
-    <div className='front'>
-      
-      <div className="mainDiv">
-        <input 
-          className="pa3 bb br3 grow b--none bg-lightest-blue ma3"
-          type = "search" 
-          placeholder = "Search People" 
-          onChange = {handleChange}
+    <div>
+      <div className="searchDiv">
+        <input
+          type="search"
+          placeholder="Search People"
+          onChange={handleChange}
         />
       </div>
       {searchList()}
-      
     </div>
   );
 }

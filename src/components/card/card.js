@@ -1,16 +1,15 @@
-
-// src/components/Card.js
-
 import React from 'react';
+
+/**
+ * Function that returns a card with the object from the json's database "friends", firstname and lastname
+ * @returns Attributes of objects (firstName and lastName) from database are returned
+ */
 
 function Card({friends}) {
   return(
-    // <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
-    //   <img className="br-100 h3 w3 dib" alt={friends.firstName} src={process.env.PUBLIC_URL + friends.imgPath} />
       <div>
         <div>
-        <h2>{friends.firstName}</h2>
-        <p>{friends.lastName}</p>
+        <h3>{friends.firstName} {friends.lastName}</h3>
       </div>
     </div>
   );

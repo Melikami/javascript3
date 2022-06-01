@@ -2,6 +2,7 @@ body {
  
 }
 
+/* sets the centering and background color of the main div */
 .main{
   display: flex;
   justify-content: center;
@@ -12,6 +13,7 @@ body {
   margin-top: 150px;
 }
 
+/* sets the centering and background color and min and max width and border for the front div */
 .front{
   display: flex;
   align-items: center;
@@ -19,11 +21,11 @@ body {
   max-width: 800px;
   min-width: 400px;
   flex-direction: column;
-  border: 5px solid black;
+  border: 8px solid black;
   border-radius: 50px;
-  padding: 20px;
 }
 
+/* sets the centering and background color and text color and min and max width and border for the heading div */
 .tracker {
   display: flex;
   align-items: center;
@@ -31,9 +33,31 @@ body {
   color: white;
   background-color: black;
   max-width: 800px;
-  min-width: 400px;
+  min-width: 100%;
+  border-radius: 40px 40px 0 0;
 }
 
+/* styles margin and padding for the dropdown menu */
+.dropdn  
+{  
+margin-left: 250px;  
+margin-top: 20px;  
+margin-right: 250px;  
+padding: 30px;  
+}  
+.slct  
+{  
+margin-top: 20px;  
+} 
+
+/* sets border and padding for the searchbar div */
+.searchDiv {
+  border: 8px solid black;
+  border-radius: 50px;
+  padding: 30px;
+}
+
+/* sets margin padding and min and max width for the header photo */
 .headerPhoto {
     margin: 0;
     padding: 0;
@@ -42,6 +66,7 @@ body {
     display: flex;
   }
 
+  /* styles the font with color and size and alignment for the create form labels */
 .create-form label{
   color: black !important;
   font-family: 'Montserrat', sans-serif;
@@ -51,12 +76,14 @@ body {
   padding: 5px;
 }
 
+/* sets the margin paddin and list style type for lists */
 ul, li {
   margin: 10px;
   padding: 5px;
   list-style-type: none;
 }
 
+/* sets centering and min and max width for the menu */
 .menu {
   display: flex;
   justify-content: center;
@@ -66,6 +93,7 @@ ul, li {
   min-width: 400px;
 }
 
+/* sets the centering and margin and background color and min and max width for the main div */
 .mainDiv {
   display: flex;
   justify-content: center;
@@ -77,6 +105,7 @@ ul, li {
   min-width: 400px;
 }
 
+/* sets the centering and margin and background color and min and max width for the search div */
 .searchDiv {
   display: flex;
   justify-content: center;
@@ -87,6 +116,7 @@ ul, li {
   width: 340px;
 }
 
+/* styles the background color text color padding margin border font weight and size and transition of the buttons */
 Button {
   background-color: black;
   color: white;
@@ -101,12 +131,14 @@ Button {
   font-size: 20px;
 }
 
+/* sets the background color and text color and border on buttons when hovered */
 Button:hover {
   background-color: white; /* Green */
   color: black;
   border: 2px solid black;
 }
 
+/* sets the background color text color padding margin and border and font size and transition of buttons on friend list page */
 .buttonRead {
   background-color: black;
   color: white;
@@ -120,12 +152,14 @@ Button:hover {
   font-size: 10px;
 }
 
+/* sets background color and text color and border on buttons on friend list page when hovered */
 .buttonRead:hover {
   background-color: white; /* Green */
   color: black;
   border: 2px solid black;
 }
 
+/* sets background color text color and padding and margin and border and font size and transition for update page buttons */
 .buttonUpdate {
   background-color: black;
   color: white;
@@ -139,12 +173,14 @@ Button:hover {
   font-size: 15px;
 }
 
+/* sets background color text color and border for update page buttons when hovered */
 .buttonUpdate:hover {
   background-color: white; /* Green */
   color: black;
   border: 2px solid black;
 }
 
+/* sets the centering and background color and min and max width for the create object forms */
 create-form {
   display: flex;
   justify-content: center;
@@ -155,23 +191,26 @@ create-form {
   min-width: 400px;
 }
 
+/* sets the display and margin and text color for the spans */
 span {
   display: flex;
   color: black;
   margin: 5px;
 }
 
+/* sets the centering for table, td and th */
 table, td, th {
   display: center;
   justify-content: center;
   align-items: center;
-
 }
 
+/* sets table width to 100% */
 table {
   width: 100%;
 }
 
+/* sets the input width to 100% */
 input {
   width: 100%;
 }

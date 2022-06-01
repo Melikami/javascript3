@@ -72,7 +72,7 @@ function MyCalendar() {
       <div className="frontImg">
         <img src={header} className="headerPhoto" alt="Header" />
       </div>
-      <div className="mainDiv">
+      <div>
         <Calendar
           selectable
           defaultView="month"
