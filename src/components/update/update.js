@@ -1,5 +1,5 @@
 /**
- * Component t o update the specific object that has been chosen. It fetches object props with useEffect and then updates them with axios and performs the update with a wrapperFunction in the button, and also has a button to go back in the menu.
+ * Component to update the specific object that has been chosen. It fetches object props with useEffect and then updates them with axios and performs the update with a wrapperFunction in the button, and also has a button to go back in the menu.
  * @param navigate - variable for navigation
  * @param id - object param
  * @param setID - sets object param id
@@ -70,7 +70,7 @@ function Update() {
     <div className="front">
       <div className="tracker">
         <h1>
-          {firstName} {lastName}
+          Update {firstName} {lastName}
         </h1>
       </div>
       <div className="frontImg">
@@ -79,29 +79,31 @@ function Update() {
       <div className="mainDiv">
         <Form className="create-form">
           <Form.Field>
-            <span className="label">First Name</span>
+            <span className="label">Update First Name?</span>
             <input
-              placeholder="First Name"
+              placeholder="First Name" className="input"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
           </Form.Field>
           <Form.Field>
-            <span className="label">Last Name</span>
+            <span className="label">Update Last Name?</span>
             <input
-              placeholder="Last Name"
+              placeholder="Last Name" className="input"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             />
           </Form.Field>
           <Form.Field>
-            <span className="label">Friendship</span>
+            <span className="label">Update Friendship?</span>
             <input
-              placeholder="Friendship"
+              placeholder="Friendship" className="input"
               value={friendship}
               onChange={(e) => setFriendship(e.target.value)}
             />
           </Form.Field>
+          </Form>
+          <div className="buttonDiv">
           <Button
             className="buttonUpdate"
             onClick={wrapperFunction}
@@ -112,7 +114,7 @@ function Update() {
           <Link to="/read">
             <Button className="buttonUpdate">Back</Button>
           </Link>
-        </Form>
+          </div>
       </div>
     </div>
   );

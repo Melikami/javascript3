@@ -36,9 +36,11 @@ function Searchbar() {
       </div>
       <div className="mainDiv">
         <Search details={APIData} />
+        <div className="buttonDiv">
         <Link to="/mainmenu">
           <Button className="buttonUpdate">Back</Button>
         </Link>
+        </div>
       </div>
     </div>
   );

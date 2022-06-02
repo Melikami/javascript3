@@ -12,6 +12,7 @@
  * @param onDelete1 - deletes the object's props friendship from the json "friendships" database
  * @param APIData.map - filters through the APIData with the APIData1 to display the object props from both the json database "friends" and json database "friendships" so that they are displayed in the same table in different columns
  * @param key - v4 uuid assigns unique key id to li elements
+ * @param popUp - A pop up window appears to confirm that a Friend has been deleted from the "friends" and "friendships" json databases
  * @return Divs with a headline and header image, then a table with different columns for firstName and lastName and friendship props from the objects from the two different json databases "friends" and "friendships" displayed in the same table in different columns. Each object has two buttons, one for updating the specific object and one for deleting it. Also two buttons to create a new object and to go back in the menu.
  */
 
@@ -87,10 +88,14 @@ function Read() {
   const key = {};
   key.id = v4();
 
+  function popUp() {
+    window.alert("The Friend is Deleted");
+  }
+
   return (
     <div className="front">
       <div className="tracker">
-        <h1>Friend Tracker</h1>
+        <h1>Friend List</h1>
       </div>
       <div className="frontImg">
         <img src={header} className="headerPhoto" alt="Header" />
@@ -99,7 +104,6 @@ function Read() {
         <Table singleLine>
           <Table.Header>
             <Table.Row>
-            <Table.HeaderCell>ID</Table.HeaderCell>
               <Table.HeaderCell>First Name</Table.HeaderCell>
               <Table.HeaderCell>Last Name</Table.HeaderCell>
               <Table.HeaderCell>Friendship</Table.HeaderCell>
@@ -112,7 +116,6 @@ function Read() {
             {APIData.map((data) => {
               return (
                 <Table.Row key={v4()}>
-                  <Table.Cell key={v4()}>{data.id}</Table.Cell>
                   <Table.Cell key={v4()}>{data.firstName}</Table.Cell>
                   <Table.Cell key={v4()}>{data.lastName}</Table.Cell>
                   <Table.Cell key={v4()}>{data.friendship}</Table.Cell>
@@ -123,7 +126,7 @@ function Read() {
                         onClick={(e) => {
                           setData(data);
                           setData1(data);
-                        }}
+                                                  }}
                       >
                         Update
                       </Button>
@@ -135,6 +138,7 @@ function Read() {
                       onClick={(e) => {
                         onDelete(data.id);
                         onDelete1(data.id);
+                        popUp();
                       }}
                     >
                       Delete
@@ -145,7 +149,7 @@ function Read() {
             })}
           </Table.Body>
         </Table>
-        <div>
+        <div className="buttonDiv">
           <Link to="/create">
             <Button className="buttonUpdate">Create</Button>
           </Link>

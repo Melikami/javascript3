@@ -8,10 +8,10 @@ export const Dropdown = (props) => (
       name="{props.firstName}"
       onChange={props.onChange}
     >
-      <option defaultValue>Select {props.firstName} {props.lastName}</option>
+      <option defaultValue>Select {props.fullName}</option>
       {props.options.map((item, index) => (
         <option key={index} value={item.id}>
-          {item.firstName} {item.lastName}
+          {item.fullName}
         </option>
       ))}
     </select>
@@ -41,7 +41,7 @@ export default class DropdownList extends React.Component {
     return (
       <div>
         <Dropdown
-          name={this.state.firstName}
+          name={this.state.fullName}
           options={this.state.list}
           onDropdownChange={this.onDropdownChange}
         />

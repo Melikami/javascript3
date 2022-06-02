@@ -10,7 +10,8 @@ body {
   background-color: #ffff;
   color: black;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /* sets the centering and background color and min and max width and border for the front div */
@@ -64,16 +65,23 @@ margin-top: 20px;
     max-width: 100%;
     min-width: 400px;
     display: flex;
+    border-bottom: 8px solid black;
   }
 
-  /* styles the font with color and size and alignment for the create form labels */
-.create-form label{
-  color: black !important;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px !important;
-  display: flex;
-  background-color: grey;
+/* sets width, font weight and alignment for input fiels */
+.input {
+  width: 200px;
+  margin: 10px;
+  font-weight: bold;
+  float: left;
+}
+
+/* sets width, font weight and alignment for input labels */
+.label {
+  float: left;
   padding: 5px;
+  width: 150px;
+  font-weight: bold;
 }
 
 /* sets the margin paddin and list style type for lists */
@@ -100,9 +108,17 @@ ul, li {
   align-items: center;
   flex-direction: column;
   margin-top: 30px;
+  margin-bottom: 30px;
   background-color: white;
   max-width: 800px;
   min-width: 400px;
+}
+
+/* Sets centering and margins for button div */
+.buttonDiv {
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 /* sets the centering and margin and background color and min and max width for the search div */
@@ -198,8 +214,8 @@ span {
   margin: 5px;
 }
 
-/* sets the centering for table, td and th */
-table, td, th {
+/* sets the centering for td */
+td {
   display: center;
   justify-content: center;
   align-items: center;

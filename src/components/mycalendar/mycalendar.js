@@ -5,7 +5,7 @@
  * @param events - objects for the different events in the calendar
  * @param setEvents - sets the params for the event objects
  * @param useEffect - calls the Events() function
- * @param Events - fetches json data from database "events" and sets the params title, start and end to the events with setEvents 
+ * @param Events - fetches json data from database "events" and sets the params title, start and end to the events with setEvents
  * @param handleSelect - function to click the calendar and type in the event name and event date in the windows prompt to store it in the json database "events". An if function sets the event with setEvents if both an acitivty name and an activity date is written in the windows prompt and then saved to the json database "events" by posting the data with axios
  * @return divs with heading and header image and a Calendar component with month view which contains function for creating a New Date and the localizer and events database and the handleSelect function plus a button to go back in the menu
  */
@@ -17,6 +17,9 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import { Link } from "react-router-dom";
 import { Button } from "semantic-ui-react";
 import axios from "axios";
+import Card from "../card/card";
+import SearchList from "../searchlist/searchlist";
+import Search from "../search/search";
 
 const header = require("../../img/catcalendar.jpg");
 
@@ -44,6 +47,19 @@ function MyCalendar() {
       .catch((err) => console.error(err));
   };
 
+  const foreignKey = {};
+    // foreignKey.id = v4()foreignKey.id = v4()
+    
+      // const [foreignKey, setforeignKey] = useState([]);
+      // useEffect(() => {
+      //   axios.get(`http://localhost:8000/friends/`).then((response) => {
+      //     console.log(response.foreignKey);
+      //     console.log(response.firstName);
+      //     setforeignKey(response.data.foreignKey);
+      //   });
+      // }, []);
+      
+
   function handleSelect({ start, end }) {
     const activity = window.prompt("New Friend Event");
     const date = window.prompt("Pick Date");
@@ -54,11 +70,7 @@ function MyCalendar() {
           start,
           end,
           date: date,
-          friend: {
-            firstName: "firstName",
-            lastName: "lastName",
-            id: "id",
-          },
+          foreignKey: foreignKey,
         }),
       ]);
     }
@@ -86,9 +98,13 @@ function MyCalendar() {
           style={{ height: 450 }}
           onSelectSlot={handleSelect}
         />
-        <Link to="/mainmenu">
-          <Button className="buttonUpdate">Back</Button>
-        </Link>
+        {/* <DropdownList />
+        <input type="date" className="dateInput"></input> */}
+        <div className="buttonDiv">
+          <Link to="/mainmenu">
+            <Button className="buttonUpdate">Back</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -28,16 +28,18 @@ function Create() {
     let navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const fullName = firstName + " " + lastName;
     const [friendship, setFriendship] = useState('');
     
-    const key = {};
-    key.id = v4()
+    const foreignKey = {};
+    foreignKey.id = v4()
     
     const postData = () => {
         axios.post(`http://localhost:8000/friends/`, {
             firstName,
             lastName,
-            key, 
+            fullName,
+            foreignKey, 
         }).then(() => {
             navigate('/read')
         })
@@ -46,7 +48,7 @@ function Create() {
     const postData1 = () => {
         axios.post(`http://localhost:8003/friendships/`, {
             friendship,
-            key
+            foreignKey
         }).then(() => {
             navigate('/read')
         })
@@ -70,16 +72,13 @@ function Create() {
         <div className="mainDiv">
             <Form className="create-form">
                 <Form.Field>
-                <span className="label">First Name</span>
-                    <input placeholder='First Name' onChange={(e) => setFirstName(e.target.value)}/>
+                    <input placeholder='Enter First Name' className="input" onChange={(e) => setFirstName(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                <span className="label">Last Name</span>
-                    <input placeholder='Last Name' onChange={(e) => setLastName(e.target.value)}/>
+                    <input placeholder='Enter Last Name' className="input" onChange={(e) => setLastName(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                <span className="label">Friendship</span>
-                    <input placeholder='Friendship' onChange={(e) => setFriendship(e.target.value)}/>
+                    <input placeholder='Enter Friendship' className="input" onChange={(e) => setFriendship(e.target.value)}/>
                 </Form.Field>
                 <Button className="buttonUpdate" onClick={ wrapperFunction } type='submit'>Create</Button>
                 <Link to="/read">
