@@ -1,0 +1,77 @@
+{
+  "events": [
+    {
+      "activity": "Honey Bunny",
+      "start": "2022-05-09T22:00:00.000Z",
+      "end": "2022-05-10T22:00:00.000Z",
+      "date": "2022-05-17",
+      "friend": {
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "foreignKey": "b4891ef6-5fd5-4a69-91be-32bfcd578d52"
+      },
+      "id": 1
+    },
+    {
+      "activity": "Mia Wallace",
+      "start": "2022-05-05T22:00:00.000Z",
+      "end": "2022-05-06T22:00:00.000Z",
+      "date": "2022-05-05",
+      "friend": {
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "foreignKey": "e33e9fe7-415f-4413-ab5c-9a98763db7bf"
+      },
+      "id": 2
+    },
+    {
+      "activity": "Butch Coolidge",
+      "start": "2022-06-14T22:00:00.000Z",
+      "end": "2022-06-15T22:00:00.000Z",
+      "date": "2022-06-10",
+      "friend": {
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "foreignKey": "6e4f35a2-550c-4bd1-8e63-10e2661b26d0"
+      },
+      "id": 3
+    },
+    {
+      "activity": "Marsellus Wallace",
+      "start": "2022-06-15T22:00:00.000Z",
+      "end": "2022-06-16T22:00:00.000Z",
+      "date": "2022-06-13",
+      "friend": {
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "foreignKey": "ad77f6f8-db0c-4ece-a52b-f0230b148ccc"
+      },
+      "id": 4
+    },
+    {
+      "activity": "Jules Winnfield",
+      "start": "2022-06-15T22:00:00.000Z",
+      "end": "2022-06-16T22:00:00.000Z",
+      "date": "2022-06-22",
+      "friend": {
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "foreignKey": "97841efa-3645-444b-a338-9e1689de617f"
+      },
+      "id": 5
+    },
+    {
+      "activity": "Mia Wallace",
+      "start": "2022-06-14T22:00:00.000Z",
+      "end": "2022-06-15T22:00:00.000Z",
+      "date": "2022-06-15",
+      "foreignKey": {},
+      "id": 19
+    }
+  ],
+  "foreignKey": [
+    {
+      "id": "id"
+    }
+  ]
+}

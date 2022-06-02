@@ -1,0 +1,135 @@
+{
+  "friends": [
+    {
+      "firstName": "Honey",
+      "lastName": "Bunny",
+      "fullName": "Honey Bunny",
+      "foreignKey": {
+        "id": "b4891ef6-5fd5-4a69-91be-32bfcd578d52"
+      },
+      "id": 32
+    },
+    {
+      "firstName": "Vincent",
+      "lastName": "Vega",
+      "fullName": "Vincent Vega",
+      "foreignKey": {
+        "id": "666fd1f0-5687-402a-ab51-7154aa54c34e"
+      },
+      "id": 33
+    },
+    {
+      "firstName": "Jules",
+      "lastName": "Winnfield",
+      "fullName": "Jules Winnfield",
+      "foreignKey": {
+        "id": "97841efa-3645-444b-a338-9e1689de617f"
+      },
+      "id": 34
+    },
+    {
+      "firstName": "Marvin",
+      "lastName": "Killed",
+      "fullName": "Marvin Killed",
+      "foreignKey": {
+        "id": "5a5d059b-2ad3-4e44-84c9-18291f5b572a"
+      },
+      "id": 35
+    },
+    {
+      "firstName": "Butch",
+      "lastName": "Coolidge",
+      "fullName": "Butch Coolidge",
+      "foreignKey": {
+        "id": "6e4f35a2-550c-4bd1-8e63-10e2661b26d0"
+      },
+      "id": 36
+    },
+    {
+      "firstName": "Marsellus",
+      "lastName": "Wallace",
+      "fullName": "Marsellus Wallace",
+      "foreignKey": {
+        "id": "ad77f6f8-db0c-4ece-a52b-f0230b148ccc"
+      },
+      "id": 37
+    },
+    {
+      "firstName": "Mia",
+      "lastName": "Wallace",
+      "fullName": "Mia Wallace",
+      "foreignKey": {
+        "id": "e33e9fe7-415f-4413-ab5c-9a98763db7bf"
+      },
+      "id": 38
+    },
+    {
+      "firstName": "Ed",
+      "lastName": "Sullivan",
+      "fullName": "Ed Sullivan",
+      "foreignKey": {
+        "id": "0456b6c5-2edd-4174-9b75-a686e00a5f56"
+      },
+      "id": 39
+    },
+    {
+      "firstName": "Phillip",
+      "lastName": "Morris Page",
+      "fullName": "Phillip Morris Page",
+      "foreignKey": {
+        "id": "c9327c1a-644b-499b-824d-c4bf66d311f4"
+      },
+      "id": 40
+    },
+    {
+      "firstName": "James",
+      "lastName": "Dean",
+      "fullName": "James Dean",
+      "foreignKey": {
+        "id": "eed75c8e-c2fe-48e8-af99-af62630e3d1a"
+      },
+      "id": 41
+    },
+    {
+      "firstName": "Marilyn",
+      "lastName": "Monroe",
+      "fullName": "Marilyn Monroe",
+      "foreignKey": {
+        "id": "da9f4202-d1e7-4883-9110-234b7e3b14ba"
+      },
+      "id": 42
+    },
+    {
+      "firstName": "Buddy",
+      "lastName": "Holly",
+      "fullName": "Buddy Holly",
+      "foreignKey": {
+        "id": "cf6f0144-e813-4cca-a14e-f40f862db942"
+      },
+      "id": 43
+    },
+    {
+      "firstName": "The",
+      "lastName": "Gimp",
+      "fullName": "The Gimp",
+      "foreignKey": {
+        "id": "d84cb698-f388-4fc2-a8c3-0a4e84c89fd7"
+      },
+      "id": 44
+    },
+    {
+      "firstName": "A",
+      "lastName": "person",
+      "fullName": "A person",
+      "foreignKey": {
+        "id": "66c4dd17-fb50-4755-ae2c-15cb4429f592"
+      },
+      "id": 45
+    }
+  ],
+  "foreignKey": [
+    {
+      "id": "id"
+    }
+  ]
+}
