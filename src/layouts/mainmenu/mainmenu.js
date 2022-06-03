@@ -21,6 +21,9 @@ function Mainmenu() {
         <Link to="/read">
           <Button>Friend List</Button>
         </Link>
+        <Link to="/modal">
+          <Button>Modal</Button>
+        </Link>
         <Link to="/mycalendar">
           <Button>Calendar API</Button>
         </Link>

@@ -230,3 +230,79 @@ table {
 input {
   width: 100%;
 }
+
+.AppModal {
+  width: 90%;
+  padding: 50px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* styling of the modal window */
+.modal {
+  position: fixed;
+  z-index: 20;
+  background: #fff;
+  width: 500px;
+  /* Centers the modal */
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* styling background color and font color padding and placement */
+.modalHeader {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* padding for modal */
+.modalMain {
+  padding: 20px;
+}
+
+/* Styling of the close button */
+.close-button {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 36px;
+}
+
+/* styling the color of the close button when hovered */
+.close-button:hover {
+  color: black;
+}
+
+/* styling the button for t he modal */
+.buttonModal {
+  background: black;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+/* styling the button when hovered on the modal */
+.buttonModal:hover {
+  background: orange;
+}
+
+/* styling border as none on the modal */
+.searchModal {
+border: none;
+}

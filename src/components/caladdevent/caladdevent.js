@@ -1,9 +1,7 @@
-import React, { useEffect, useState  } from 'react';
+import React, { useState  } from 'react';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
-import axios from 'axios';
-import Read from '../read/read';
 
 function CalAddEvent() {
     const localizer = momentLocalizer(moment)

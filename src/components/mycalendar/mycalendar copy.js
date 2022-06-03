@@ -17,6 +17,9 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import { Link } from "react-router-dom";
 import { Button } from "semantic-ui-react";
 import axios from "axios";
+import Card from "../card/card";
+import SearchList from "../searchlist/searchlist";
+import Search from "../search/search";
 
 const header = require("../../img/catcalendar.jpg");
 
@@ -44,21 +47,27 @@ function MyCalendar() {
       .catch((err) => console.error(err));
   };
 
+  const foreignKey = {};
+    // foreignKey.id = v4()foreignKey.id = v4()
+    
+      // const [foreignKey, setforeignKey] = useState([]);
+      // useEffect(() => {
+      //   axios.get(`http://localhost:8000/friends/`).then((response) => {
+      //     console.log(response.foreignKey);
+      //     console.log(response.firstName);
+      //     setforeignKey(response.data.foreignKey);
+      //   });
+      // }, []);
+      
+
   function handleSelect({ start, end }) {
     const activity = window.prompt("New Friend Event");
-    const date = window.prompt("Pick Date");
-    if (activity + date) {
+    if (activity) {
       setEvents([
         axios.post(`http://localhost:8001/events/`, {
           activity,
-          start,
-          end,
-          date: date,
-          friend: {
-            firstName: "firstName",
-            lastName: "lastName",
-            id: "id",
-          },
+          date: start,
+          foreignKey: foreignKey,
         }),
       ]);
     }

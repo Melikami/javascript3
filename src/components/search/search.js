@@ -4,7 +4,7 @@
  * @param searchShow - Searched object shows up here if matched
  * @param setSearchShow - sets the boolean status true or false to show the object info or not in the searchField
  * @param filteredPersons - filters through the details of database "friends" to find matching spelled objects
- * @return - "friends" database object's fullName filtered through for matching spelling and put toLowerCase
+ * @return - "friends" database object's fullName filtered through for matching spelling and put toLowerCase. Object's firstName and lastName is also filtered through. Sometimes when an object is created it is not immediately given a "fullName" and if it hasn't been given one, the search bar will crash when you try entering more than either the firstName or the lastName
  * @param handleChange - sets the SearchField to show objects if matching in spelling, and to not show object if not matching
  * @param searchList - if searchShow is set to true then the matching object by spelling is showed in the SearchList in the Scroll component.
  * @return - a div with handleChange deciding if objects from SearchList is being showed or not
@@ -20,7 +20,9 @@ function Search({ details }) {
 
   const filteredPersons = details.filter((friends) => {
     return (
-      friends.fullName.toLowerCase().includes(searchField.toLowerCase())
+      friends.firstName.toLowerCase().includes(searchField.toLowerCase()) ||
+      friends.lastName.toLowerCase().includes(searchField.toLowerCase()) 
+      || friends.fullName.toLowerCase().includes(searchField.toLowerCase())
     );
   });
 

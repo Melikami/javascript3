@@ -95,36 +95,18 @@
       "lastName": "Monroe",
       "fullName": "Marilyn Monroe",
       "foreignKey": {
-        "id": "da9f4202-d1e7-4883-9110-234b7e3b14ba"
+        "id": "18443c88-8c61-4290-a3c9-770c8380f8c1"
       },
       "id": 42
-    },
-    {
-      "firstName": "Buddy",
-      "lastName": "Holly",
-      "fullName": "Buddy Holly",
-      "foreignKey": {
-        "id": "cf6f0144-e813-4cca-a14e-f40f862db942"
-      },
-      "id": 43
     },
     {
       "firstName": "The",
       "lastName": "Gimp",
       "fullName": "The Gimp",
       "foreignKey": {
-        "id": "d84cb698-f388-4fc2-a8c3-0a4e84c89fd7"
+        "id": "2a7bc8e2-8cb8-4320-bd98-31f6c772a433"
       },
       "id": 44
-    },
-    {
-      "firstName": "A",
-      "lastName": "person",
-      "fullName": "A person",
-      "foreignKey": {
-        "id": "66c4dd17-fb50-4755-ae2c-15cb4429f592"
-      },
-      "id": 45
     }
   ],
   "foreignKey": [

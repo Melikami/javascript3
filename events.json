@@ -3,8 +3,8 @@
     {
       "activity": "Honey Bunny",
       "start": "2022-05-09T22:00:00.000Z",
-      "end": "2022-05-10T22:00:00.000Z",
-      "date": "2022-05-17",
+      "end": "2022-05-09T22:00:00.000Z",
+      "date": "2022-05-09",
       "friend": {
         "firstName": "firstName",
         "lastName": "lastName",
@@ -15,7 +15,7 @@
     {
       "activity": "Mia Wallace",
       "start": "2022-05-05T22:00:00.000Z",
-      "end": "2022-05-06T22:00:00.000Z",
+      "end": "2022-05-05T22:00:00.000Z",
       "date": "2022-05-05",
       "friend": {
         "firstName": "firstName",
@@ -27,8 +27,8 @@
     {
       "activity": "Butch Coolidge",
       "start": "2022-06-14T22:00:00.000Z",
-      "end": "2022-06-15T22:00:00.000Z",
-      "date": "2022-06-10",
+      "end": "2022-06-14T22:00:00.000Z",
+      "date": "2022-06-14",
       "friend": {
         "firstName": "firstName",
         "lastName": "lastName",
@@ -38,8 +38,8 @@
     },
     {
       "activity": "Marsellus Wallace",
-      "start": "2022-06-15T22:00:00.000Z",
-      "end": "2022-06-16T22:00:00.000Z",
+      "start": "2022-06-13T22:00:00.000Z",
+      "end": "2022-06-13T22:00:00.000Z",
       "date": "2022-06-13",
       "friend": {
         "firstName": "firstName",
@@ -50,9 +50,9 @@
     },
     {
       "activity": "Jules Winnfield",
-      "start": "2022-06-15T22:00:00.000Z",
-      "end": "2022-06-16T22:00:00.000Z",
-      "date": "2022-06-22",
+      "start": "2022-06-11T22:00:00.000Z",
+      "end": "2022-06-11T22:00:00.000Z",
+      "date": "2022-06-11",
       "friend": {
         "firstName": "firstName",
         "lastName": "lastName",
@@ -62,11 +62,25 @@
     },
     {
       "activity": "Mia Wallace",
-      "start": "2022-06-14T22:00:00.000Z",
+      "start": "2022-06-15T22:00:00.000Z",
       "end": "2022-06-15T22:00:00.000Z",
       "date": "2022-06-15",
       "foreignKey": {},
       "id": 19
+    },
+    {
+      "activity": "The Gimp",
+      "date": "2022-06-22T22:00:00.000Z",
+      "end": "2022-06-23T22:00:00.000Z",
+      "foreignKey": {},
+      "id": 20
+    },
+    {
+      "activity": "Marilyn Monroe",
+      "date": "2022-06-25T22:00:00.000Z",
+      "end": "2022-06-26T22:00:00.000Z",
+      "foreignKey": {},
+      "id": 21
     }
   ],
   "foreignKey": [
