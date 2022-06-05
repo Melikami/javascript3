@@ -2,6 +2,7 @@
  * Component which shows a searchbar where you can search for objects by matching their firstName or lastName
  * @param APIData - array to put json database "friends" objects in
  * @param setAPIData - sets the props data of APIData
+ * @function ModalSearch - With handleSelectFriend, fetches the "friends" objects from json database.
  * @return returns a modal with a search bar of the "friends" json database objects
  * 
  */
@@ -13,7 +14,7 @@
  import axios from "axios";
  import "../../App.css";
  
- function ModalSearch() {
+ function ModalSearch({handleSelectFriend}) {
    const [APIData, setAPIData] = useState([]);
    useEffect(() => {
      axios.get(`http://localhost:8000/friends/`).then((response) => {
@@ -24,7 +25,7 @@
 
    return (
      <div className="searchModal">
-         <Search details={APIData} />
+         <Search details={APIData} handleSelectFriend={handleSelectFriend} />
      </div>
    );
  }

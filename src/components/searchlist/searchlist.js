@@ -8,9 +8,11 @@
 import React from "react";
 import Card from "../card/card";
 
-function SearchList({ filteredPersons }) {
+function SearchList({ filteredPersons, handleSelectFriend }) {
   const filtered = filteredPersons.map((friends) => (
-    <Card key={friends.id} friends={friends} />
+    <Card key={friends.id} friends={friends} onClick={() => {
+      handleSelectFriend(friends);
+    }} />
   ));
   return (
     <div className="">

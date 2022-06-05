@@ -1,5 +1,6 @@
 /**
  * Modal component for the calendar
+ * @function Modal - with handlePickFriend and boleean isOpen
  * @param modalIsOpen - the open state of the modal
  * @param setIsOpen - setting the open state of the modal
  * @param openModal - sets the state of the modal to isOpen
@@ -9,8 +10,8 @@
 import React, { useState } from "react";
 import ModalSearch from "../modalsearch/modalsearch";
 
-function Modal() {
-  const [modalIsOpen, setIsOpen] = useState(false);
+function Modal({handlePickFriend, isOpen}) {
+  const [modalIsOpen, setIsOpen] = useState(isOpen);
 
   const openModal = () => {
     setIsOpen(true);
@@ -23,8 +24,7 @@ function Modal() {
   return (
     <div className="AppModal">
       {modalIsOpen && (
-        <>
-          <div className="overlay"></div>
+        <div className="overlay">
           <div className="modal">
             <header className="modalHeader">
               <h2>Book Friend Event</h2>
@@ -34,7 +34,7 @@ function Modal() {
             <ModalSearch onClick={modalIsOpen} />
             </main>
           </div>
-        </>
+        </div>
       )}
 
       <h2>Select Friend</h2>
