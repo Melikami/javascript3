@@ -29,6 +29,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "concurrently --kill-others \"yarn start-events-server\" \"yarn start-friends-server\" \"yarn start-friendships-server\" \"yarn start-react\"",
+    "start-events-server": "json-server --watch ./events.json --port 8001",
+    "start-friends-server": "json-server --watch ./friends.json --port 8000",
+    "start-friendships-server": "json-server --watch ./friendships.json --port 8003",
+    "start-webpack-dev-server": "webpack-dev-server --config ./src/demo/webpack.config.js --open",
+    "start-react": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
